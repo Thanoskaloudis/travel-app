@@ -55,6 +55,7 @@ app.post('/weather', async function(req, res) {
 
     const fetchWeather = await fetch (`${weatherBaseURL}&lat=${lat}&lon=${lon}&days=3&key=${weatherKey}`)
     const weatherInJson = await fetchWeather.json()
+    console.log('fetchWeather', fetchWeather);
     res.send(weatherInJson)
 })
 
