@@ -92,6 +92,12 @@ const handleSubmit = async (event) => {
         } catch (error) {
             console.log('error', error);
         }
+        
+        const main = document.querySelector('main')
+        const tripData = document.createElement('section')
+        tripData.setAttribute('id', 'trip')
+        tripData.innerHTML = Client.updateUI(dates, receivedPicInJson, cityLatLon, receivedWeatherInJson);
+        main.appendChild(tripData)
 }
 
 export { handleSubmit }

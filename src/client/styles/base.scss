@@ -2,8 +2,8 @@ $keycolor: rgb(247, 125, 25);
 $defaultfont: 300 1rem "Roboto Slab", serif;
 
 body {
+    background-color: #2a75920f;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -14,6 +14,7 @@ main {
     justify-content: center;
     text-align: center;
     margin: 1rem;
+    min-height: 80vh;
     font: $defaultfont;
 }
 
@@ -27,7 +28,7 @@ p {
 
 section {
     max-width: 800px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     background: rgba(238, 234, 234, 0.8);
 
 
