@@ -18,7 +18,7 @@
             
             <main>
 
-                <section id="entry" class="entry">
+                <section id="entry">
                     <h2>Plan and manage your trip</h2>
                     <form>
                         <input id="city" type="text" name="city" placeholder="Where to (e.g. London, Milan, New York)">
@@ -49,6 +49,13 @@
             </footer>
             </div>
         <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
         </script>
     </body>
 </html>
