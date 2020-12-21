@@ -27,7 +27,6 @@
                         <input type="date" id="start" name="start" required>
                         <label for="end">End:</label>
                         <input type="date" id="end" name="end" required>
-
                         <button id="submit" type = "submit">Start planning</button>
                     </form>
                 </section>
@@ -49,6 +48,13 @@
             </footer>
             </div>
         <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
         </script>
     <script type="text/javascript" src="main.js"></script></body>
 </html>

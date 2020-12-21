@@ -1,14 +1,11 @@
 function updateUI(days, img, dest, weather) {
     return `
-            <div id="dest_img">
-                <img src="${img.hits[0].webformatURL}" alt="">
-            </div>
-            <div id="dest_countdown">
-                in ${days.diffInDays} days
-            </div>
             <div id="destination">
                 <p>Your Trip To:</p>
                 <h3>${dest.city}, ${dest.country}</h3>
+            </div>
+            <div id="dest_img">
+                <img src="${img.hits[0].webformatURL}" alt="">
             </div>
             <div id="dest_date">
                 <p>Dates:</p>
